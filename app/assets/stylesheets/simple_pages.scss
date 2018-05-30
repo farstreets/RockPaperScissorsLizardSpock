@@ -1,0 +1,67 @@
+// Place all the styles related to the simple_pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+* {box-sizing: border-box;}
+
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background-color: #15133C;
+  color: #5FC5BA;
+  text-align: center;
+  /* Helvetica/Arial-based sans serif stack */
+  // font-family: Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  /* Verdana-based sans serif stack */
+  // font-family: Corbel, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", "Bitstream Vera Sans", "Liberation Sans", Verdana, "Verdana Ref", sans-serif;
+  /* Trebuchet-based sans serif stack */
+  font-family: "Segoe UI", Candara, "Bitstream Vera Sans", "DejaVu Sans", "Bitstream Vera Sans", "Trebuchet MS", Verdana, "Verdana Ref", sans-serif;
+  /* Impact-based sans serif stack */
+  // font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", Charcoal, "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black", sans-serif;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* if portrait mode is detected, rotate the entire site -90 degrees to hint rotating to landscape */
+@media (orientation: portrait) {
+  body {
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+  }
+}
+
+#img_rpsls {
+  display: block;
+  margin: 0 auto;
+  width: 30%;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+// // Aspect ratio box:
+// #aspect_ratio_outer {
+//   position: relative;
+//   width: 100%;
+//   padding-bottom: 40%; //
+//   margin: auto;
+//   border-style: solid;
+//   border-color: white;
+//   border-width: 10px;
+//   // top: 50%;
+//   // transform: translateY(25%);
+// }
+// #aspect_ratio_inner {
+//   position: absolute;
+//   min-width: 100%;
+//   max-width: 100%;
+//   min-height: 100%;
+//   max-height: 100%;
+// }

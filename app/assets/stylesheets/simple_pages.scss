@@ -24,13 +24,41 @@ body {
   // font-family: Corbel, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", "Bitstream Vera Sans", "Liberation Sans", Verdana, "Verdana Ref", sans-serif;
   /* Trebuchet-based sans serif stack */
   font-family: "Segoe UI", Candara, "Bitstream Vera Sans", "DejaVu Sans", "Bitstream Vera Sans", "Trebuchet MS", Verdana, "Verdana Ref", sans-serif;
-  font-size: 4em;
+  // font-size: 4em;
   font-weight: bold;
   /* Impact-based sans serif stack */
   // font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", Charcoal, "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black", sans-serif;
   width: 100%;
   height: 100%;
   overflow: hidden;
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) and (max-width: 767.98px)
+{
+  body {
+    font-size: 2em;
+  }
+}
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) and (max-width: 991.98px)
+{
+  body {
+    font-size: 3em;
+  }
+}
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) and (max-width: 1199.98px)
+{
+  body {
+    font-size: 3.5em;
+  }
+}
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  body {
+    font-size: 4em;
+  }
 }
 
 .container-fluid {
@@ -40,20 +68,43 @@ body {
 
 /* if portrait mode is detected, rotate the entire site -90 degrees to hint rotating to landscape */
 @media (orientation: portrait) {
-  body {
-    -webkit-transform: rotate(-90deg);
-    -moz-transform: rotate(-90deg);
-    -o-transform: rotate(-90deg);
-    -ms-transform: rotate(-90deg);
-    transform: rotate(-90deg);
+  #screen_lock {
+    position: fixed;
+    display: block;
+    top: 0;
+    left: 0;
+    height:100%;
+    width:100%;
+    margin: 0;
+    padding: 0;
+    overflow:hidden; /* or overflow:auto; if you want scrollbars */
+    background-color: $darkblue;
+    color: $mintgreen;
+    font-size: 2.5em;
+    text-transform: uppercase;
+    // -webkit-transform: rotate(-90deg);
+    // -moz-transform: rotate(-90deg);
+    // -o-transform: rotate(-90deg);
+    // -ms-transform: rotate(-90deg);
+    // transform: rotate(-90deg);
+    z-index: 1;
+  }
+  #screen_lock_spacer_top {
+    padding-top:40%;
+  }
+}
+/* if portrait mode is detected, rotate the entire site -90 degrees to hint rotating to landscape */
+@media (orientation: landscape) {
+  #screen_lock {
+    display: none;
   }
 }
 
 .image_spacer {
-  height: 10vh;
+  height: 20vh;
 }
 .image_div {
-  height: 80vh;
+  height: 60vh;
 }
 #img_rpsls {
   display: block;

@@ -2,6 +2,11 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+
+$darkblue: #15133C;
+$mintgreen: #5FC5BA;
+$lightblue: #0192C0;
+
 * {box-sizing: border-box;}
 
 html {
@@ -10,8 +15,8 @@ html {
 }
 
 body {
-  background-color: #15133C;
-  color: #5FC5BA;
+  background-color: $darkblue;
+  color: $mintgreen;
   text-align: center;
   /* Helvetica/Arial-based sans serif stack */
   // font-family: Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -19,11 +24,18 @@ body {
   // font-family: Corbel, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", "Bitstream Vera Sans", "Liberation Sans", Verdana, "Verdana Ref", sans-serif;
   /* Trebuchet-based sans serif stack */
   font-family: "Segoe UI", Candara, "Bitstream Vera Sans", "DejaVu Sans", "Bitstream Vera Sans", "Trebuchet MS", Verdana, "Verdana Ref", sans-serif;
+  font-size: 4em;
+  font-weight: bold;
   /* Impact-based sans serif stack */
   // font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", Charcoal, "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black", sans-serif;
   width: 100%;
   height: 100%;
   overflow: hidden;
+}
+
+.container-fluid {
+  margin-left: 0;
+  margin-right: 0;
 }
 
 /* if portrait mode is detected, rotate the entire site -90 degrees to hint rotating to landscape */
@@ -37,11 +49,19 @@ body {
   }
 }
 
+.image_spacer {
+  height: 10vh;
+}
+.image_div {
+  height: 80vh;
+}
 #img_rpsls {
   display: block;
   margin: 0 auto;
-  width: 80%;
-  // height: 50%;
+  // width: 80%;
+  height: 100%;
+  // width: 90%;
+  // margin: 25% 0;
   // position: relative;
   // top: 50%;
   // transform: translateY(20%);
@@ -72,29 +92,166 @@ ul {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #5FC5BA;
-  color: #15133C;
+  border-top: solid;
+  border-bottom: solid;
+  border-color: $darkblue;
+  border-width: 0px;
+  // background-color: $mintgreen;
+  // color: $darkblue;
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0;
+  -webkit-padding-start: 0;
 }
 
 li {
   // float: left;
   height: calc(100vh / 6);
-  border-style: solid;
-  border-color: white;
-  border-width: 4px;
+  margin: 0;
+  // border-style: solid;
+  // border-color: $darkblue;
+  // border-width: 4px;
+  background-color: $darkblue;
+  // color: $darkblue;
 }
 
-li a {
-  display: block;
+// li a {
+//   display: block;
+//   text-align: center;
+//   padding: 16px;
+//   text-decoration: none;
+// }
+
+// li a:hover {
+//   background-color: #111111;
+//   color: white;
+//   text-align: center;
+//   padding: 16px;
+//   text-decoration: none;
+// }
+
+
+
+.player_li {
+  background-color: $darkblue;
+  color: $lightblue;
   text-align: center;
-  padding: 16px;
-  text-decoration: none;
+}
+.player_span {
+  height: 100%;
+  width: 100%;
+  // display: inline-block;
+  vertical-align: middle;
+  line-height: normal;
+  white-space: nowrap;
+  padding: 0;
+  margin: 0;
+      display: list-item;
+      // -webkit-writing-mode: tab;
+      // -webkit-appearance: button;
+      text-transform: none;
+      text-align: center;
 }
 
-li a:hover {
-  background-color: #111111;
-  color: white;
-  text-align: center;
-  padding: 16px;
-  text-decoration: none;
+.switch {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: normal;
+}
+
+.col-xs-3 {
+  margin: 0;
+  padding: 0;
+}
+.col-xs-6 {
+  margin: 0;
+  padding: 0;
+}
+.btn {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  font-size: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+}
+.btn-primary {
+  background-color: $mintgreen;
+  color: $darkblue;
+  border-color: $darkblue;
+}
+.btn-primary:active {
+  background-color: $mintgreen;
+  color: $darkblue;
+  outline: none;
+  border-color: $darkblue;
+}
+.btn-primary:focus {
+  background-color: $mintgreen;
+  color: $darkblue;
+  outline: none;
+  border-color: $darkblue;
+}
+.btn-primary:hover {
+  background-color: $darkblue;
+  color: $mintgreen;
+  border-color: $mintgreen;
+}
+.btn-primary:active:focus {
+  background-color: $darkblue;
+  color: $mintgreen;
+  border-color: $mintgreen;
+  outline: none;
+}
+
+.btn-secondary {
+  text-transform: uppercase;
+  background-color: $darkblue;
+  color: $mintgreen;
+  border-color: $darkblue;
+}
+.btn-secondary:active {
+  text-transform: uppercase;
+  background-color: $darkblue;
+  color: $mintgreen;
+  border-color: $darkblue;
+  outline: none;
+}
+.btn-secondary:focus {
+  text-transform: uppercase;
+  background-color: $darkblue;
+  color: $mintgreen;
+  border-color: $darkblue;
+  outline: none;
+}
+.btn-secondary:active:focus {
+  text-transform: uppercase;
+  background-color: $darkblue;
+  color: $mintgreen;
+  border-color: $mintgreen;
+  outline: none;
+}
+.btn-secondary:hover {
+  text-transform: uppercase;
+  background-color: $darkblue;
+  color: $mintgreen;
+  border-color: $mintgreen;
+}
+.btn-outline-primary {
+  text-transform: uppercase;
+  cursor: default;
+  background-color: $darkblue;
+  color: $mintgreen;
+  opacity: 1;
+}
+.btn-outline-primary:hover {
+  text-transform: uppercase;
+  cursor: default;
+  background-color: $darkblue;
+  color: $mintgreen;
+  opacity: 1;
+}
+.btn.disabled, .btn[disabled], fieldset[disabled] .btn {
+  opacity: 1;
 }

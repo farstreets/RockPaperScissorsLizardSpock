@@ -2,7 +2,6 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-
 $darkblue: #15133C;
 $mintgreen: #5FC5BA;
 $lightblue: #0192C0;
@@ -257,6 +256,20 @@ li {
   border-color: $mintgreen;
   outline: none;
 }
+.btn-primary.disabled, .btn-primary[disabled], fieldset[disabled] .btn-primary {
+  opacity: 0.8 !important;
+  background-color: $mintgreen;
+  color: $darkblue;
+  border-color: $darkblue;
+  outline: none;
+}
+.btn-primary.disabled:hover, .btn-primary[disabled]:hover, fieldset[disabled] .btn-primary:hover {
+  opacity: 0.8 !important;
+  background-color: $mintgreen;
+  color: $darkblue;
+  border-color: $darkblue;
+  outline: none;
+}
 
 .btn-secondary {
   text-transform: uppercase;
@@ -291,15 +304,27 @@ li {
   color: $mintgreen;
   border-color: $mintgreen;
 }
-.btn-outline-primary {
+#p1_dummy_btn {
   text-transform: uppercase;
   cursor: default;
   background-color: $darkblue;
   color: $mintgreen;
   opacity: 1;
 }
-.btn-outline-primary:hover {
+#p1_dummy_btn:hover {
   text-transform: uppercase;
+  cursor: default;
+  background-color: $darkblue;
+  color: $mintgreen;
+  opacity: 1;
+}
+#div_below_img {
+  cursor: default;
+  background-color: $darkblue;
+  color: $mintgreen;
+  opacity: 1;
+}
+#div_below_img:hover {
   cursor: default;
   background-color: $darkblue;
   color: $mintgreen;

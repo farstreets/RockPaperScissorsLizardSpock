@@ -1,5 +1,11 @@
 {
   "name": "rock-paper-scissors-lizard-spock",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "ejs": "^2.6.1",
+    "javascript-state-machine": "^3.0.1"
+  },
+  "devDependencies": {
+    "state-machine-js": "0.0.7"
+  }
 }

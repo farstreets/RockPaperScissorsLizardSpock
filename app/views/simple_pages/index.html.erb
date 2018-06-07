@@ -116,22 +116,53 @@
     $(".p2_hand_btn").prop( "disabled", false );
   };
   $("#p2_sel_btn").html(players.p2.name);
-
-  function reset_text_decorations() {
-    $("#p2_sel_btn").css("text-decoration", "none");
-    $("#p1_dummy_btn").css( "text-decoration", "none");
+  function reset_text_below_image() {
     $("#div_below_img").html("");
-    $("#p1_rock_btn").css("text-decoration", "none");
-    $("#p1_paper_btn").css("text-decoration", "none");
-    $("#p1_scissors_btn").css("text-decoration", "none");
-    $("#p1_lizard_btn").css("text-decoration", "none");
-    $("#p1_spock_btn").css("text-decoration", "none");
-    $("#p2_rock_btn").css("text-decoration", "none");
-    $("#p2_paper_btn").css("text-decoration", "none");
-    $("#p2_scissors_btn").css("text-decoration", "none");
-    $("#p2_lizard_btn").css("text-decoration", "none");
-    $("#p2_spock_btn").css("text-decoration", "none");
+  }
+  function reset_text_decorations() {
+    // $("#p2_sel_btn").css("text-decoration", "none");
+    // $("#p1_dummy_btn").css( "text-decoration", "none");
+    // $("#p1_rock_btn").css("text-decoration", "none");
+    // $("#p1_paper_btn").css("text-decoration", "none");
+    // $("#p1_scissors_btn").css("text-decoration", "none");
+    // $("#p1_lizard_btn").css("text-decoration", "none");
+    // $("#p1_spock_btn").css("text-decoration", "none");
+    // $("#p2_rock_btn").css("text-decoration", "none");
+    // $("#p2_paper_btn").css("text-decoration", "none");
+    // $("#p2_scissors_btn").css("text-decoration", "none");
+    // $("#p2_lizard_btn").css("text-decoration", "none");
+    // $("#p2_spock_btn").css("text-decoration", "none");
+    // $("#p2_sel_btn").css("text-transform", "none");
+    // $("#p1_dummy_btn").css( "text-transform", "none");
+    // $("#p1_rock_btn").css("text-transform", "none");
+    // $("#p1_paper_btn").css("text-transform", "none");
+    // $("#p1_scissors_btn").css("text-transform", "none");
+    // $("#p1_lizard_btn").css("text-transform", "none");
+    // $("#p1_spock_btn").css("text-transform", "none");
+    // $("#p2_rock_btn").css("text-transform", "none");
+    // $("#p2_paper_btn").css("text-transform", "none");
+    // $("#p2_scissors_btn").css("text-transform", "none");
+    // $("#p2_lizard_btn").css("text-transform", "none");
+    // $("#p2_spock_btn").css("text-transform", "none");
+    $("#p2_sel_btn").css("background-color", "#FFBB00");
+    $("#p2_sel_btn").css( "color", "#15133C");
+    $("#p1_dummy_btn").css( "background-color", "#FFBB00");
+    $("#p1_dummy_btn").css( "color", "#15133C");
+    $("#p1_rock_btn").css("background-color", "#15133C");
+    $("#p1_paper_btn").css("background-color", "#15133C");
+    $("#p1_scissors_btn").css("background-color", "#15133C");
+    $("#p1_lizard_btn").css("background-color", "#15133C");
+    $("#p1_spock_btn").css("background-color", "#15133C");
+    $("#p2_rock_btn").css("background-color", "#15133C");
+    $("#p2_paper_btn").css("background-color", "#15133C");
+    $("#p2_scissors_btn").css("background-color", "#15133C");
+    $("#p2_lizard_btn").css("background-color", "#15133C");
+    $("#p2_spock_btn").css("background-color", "#15133C");
   };
+  function reset_text() {
+    reset_text_below_image();
+    reset_text_decorations();
+  }
 
   function randomHand() {
     rand_i = Math.floor((Math.random() * 5) + 1);
@@ -171,12 +202,24 @@
           // Disable buttons
           if (caller_i === players.p1.name) {
             $(".p1_hand_btn").prop( "disabled", true );
+            // Get rid of last games output
+            reset_text_decorations();
+            $("#p1_rock_btn").css("background-color", "#606060");
+            $("#p1_paper_btn").css("background-color", "#606060");
+            $("#p1_scissors_btn").css("background-color", "#606060");
+            $("#p1_lizard_btn").css("background-color", "#606060");
+            $("#p1_spock_btn").css("background-color", "#606060");
           } else { // Player 2
             $(".p2_hand_btn").prop( "disabled", true );
+            // Get rid of last games output
+            reset_text_decorations();
+            $("#p2_rock_btn").css("background-color", "#606060");
+            $("#p2_paper_btn").css("background-color", "#606060");
+            $("#p2_scissors_btn").css("background-color", "#606060");
+            $("#p2_lizard_btn").css("background-color", "#606060");
+            $("#p2_spock_btn").css("background-color", "#606060");
           }
           $("#p2_sel_btn").prop( "disabled", true );
-          // Get rid of last games output
-          reset_text_decorations();
           break;
         case states.s_1_hand:
           // Transition
@@ -195,6 +238,7 @@
 
   // Determine the winner
   function winner() {
+    reset_text();
     win_result = ["", ""];
     switch(players.p1.hand) {
       case hands.rock:
@@ -310,62 +354,111 @@
     console.log(players.p1.name);
     console.log(players.p2.name);
     if (players.p1.name === win_result[0]) {
-      $("#p1_dummy_btn").css( "text-decoration", "underline");
-      $("#p2_sel_btn").css( "text-decoration", "none");
+      // $("#p1_dummy_btn").css( "text-decoration", "underline");
+      // $("#p1_dummy_btn").css( "text-transform", "uppercase");
+      // $("#p2_sel_btn").css( "text-decoration", "none");
+      // $("#p2_sel_btn").css( "text-transform", "none");
+      $("#p1_dummy_btn").css( "background-color", "#606060");
+      $("#p1_dummy_btn").css( "color", "#FFBB00");
+      $("#p1_dummy_btn").css( "border-color", "#FFBB00");
+      $("#p2_sel_btn").css( "background-color", "#FFBB00");
+      $("#p2_sel_btn").css( "color", "#15133C");
     } else if (players.p2.name === win_result[0]) {
-      $("#p2_sel_btn").css( "text-decoration", "underline");
-      $("#p1_dummy_btn").css( "text-decoration", "none" );
+      // $("#p2_sel_btn").css( "text-decoration", "underline");
+      // $("#p2_sel_btn").css( "text-transform", "uppercase");
+      // $("#p1_dummy_btn").css( "text-decoration", "none" );
+      // $("#p1_dummy_btn").css( "text-transform", "none");
+      $("#p1_dummy_btn").css( "background-color", "#FFBB00");
+      $("#p1_dummy_btn").css( "color", "#15133C");
+      $("#p2_sel_btn").css( "background-color", "#606060");
+      $("#p2_sel_btn").css( "color", "#FFBB00");
     } else {
-      $("#p1_dummy_btn").css( "text-decoration", "none");
-      $("#p2_sel_btn").css( "text-decoration", "none");
+      // $("#p1_dummy_btn").css( "text-decoration", "none");
+      // $("#p1_dummy_btn").css( "text-transform", "none");
+      // $("#p2_sel_btn").css( "text-decoration", "none");
+      // $("#p2_sel_btn").css( "text-transform", "none");
+      $("#p1_dummy_btn").css( "background-color", "#FFBB00");
+      $("#p1_dummy_btn").css( "color", "#15133C");
+      $("#p2_sel_btn").css( "background-color", "#FFBB00");
+      $("#p2_sel_btn").css( "color", "#15133C");
     }
     $("#div_below_img").html(win_result[1]);
     // Underline chosen buttons
     switch(players.p1.hand) {
       case hands.rock:
-        $("#p1_rock_btn").css("text-decoration", "underline");
+        // $("#p1_rock_btn").css("text-decoration", "underline");
+        // $("#p1_rock_btn").css("text-transform", "uppercase");
+        $("#p1_rock_btn").css( "background-color", "#606060");
         break;
       case hands.paper:
-        $("#p1_paper_btn").css("text-decoration", "underline");
+        // $("#p1_paper_btn").css("text-decoration", "underline");
+        // $("#p1_paper_btn").css("text-transform", "uppercase");
+        $("#p1_paper_btn").css( "background-color", "#606060");
         break;
       case hands.scissors:
-        $("#p1_scissors_btn").css("text-decoration", "underline");
+        // $("#p1_scissors_btn").css("text-decoration", "underline");
+        // $("#p1_scissors_btn").css("text-transform", "uppercase");
+        $("#p1_scissors_btn").css( "background-color", "#606060");
         break;
       case hands.lizard:
-        $("#p1_lizard_btn").css("text-decoration", "underline");
+        // $("#p1_lizard_btn").css("text-decoration", "underline");
+        // $("#p1_lizard_btn").css("text-transform", "uppercase");
+        $("#p1_lizard_btn").css( "background-color", "#606060");
         break;
       case hands.spock:
-        $("#p1_spock_btn").css("text-decoration", "underline");
+        // $("#p1_spock_btn").css("text-decoration", "underline");
+        // $("#p1_spock_btn").css("text-transform", "uppercase");
+        $("#p1_spock_btn").css( "background-color", "#606060");
         break;
       default:
-      $("#p1_rock_btn").css("text-decoration", "none");
-      $("#p1_paper_btn").css("text-decoration", "none");
-      $("#p1_scissors_btn").css("text-decoration", "none");
-      $("#p1_lizard_btn").css("text-decoration", "none");
-      $("#p1_spock_btn").css("text-decoration", "none");
+      // $("#p1_rock_btn").css("text-decoration", "none");
+      // $("#p1_paper_btn").css("text-decoration", "none");
+      // $("#p1_scissors_btn").css("text-decoration", "none");
+      // $("#p1_lizard_btn").css("text-decoration", "none");
+      // $("#p1_spock_btn").css("text-decoration", "none");
+      // $("#p1_rock_btn").css("text-transform", "none");
+      // $("#p1_paper_btn").css("text-transform", "none");
+      // $("#p1_scissors_btn").css("text-transform", "none");
+      // $("#p1_lizard_btn").css("text-transform", "none");
+      // $("#p1_spock_btn").css("text-transform", "none");
     }
     switch(players.p2.hand) {
       case hands.rock:
-        $("#p2_rock_btn").css("text-decoration", "underline");
+        // $("#p2_rock_btn").css("text-decoration", "underline");
+        // $("#p2_rock_btn").css("text-transform", "uppercase");
+        $("#p2_rock_btn").css( "background-color", "#606060");
         break;
       case hands.paper:
-        $("#p2_paper_btn").css("text-decoration", "underline");
+        // $("#p2_paper_btn").css("text-decoration", "underline");
+        // $("#p2_paper_btn").css("text-transform", "uppercase");
+        $("#p2_paper_btn").css( "background-color", "#606060");
         break;
       case hands.scissors:
-        $("#p2_scissors_btn").css("text-decoration", "underline");
+        // $("#p2_scissors_btn").css("text-decoration", "underline");
+        // $("#p2_scissors_btn").css("text-transform", "uppercase");
+        $("#p2_scissors_btn").css( "background-color", "#606060");
         break;
       case hands.lizard:
-        $("#p2_lizard_btn").css("text-decoration", "underline");
+        // $("#p2_lizard_btn").css("text-decoration", "underline");
+        // $("#p2_lizard_btn").css("text-transform", "uppercase");
+        $("#p2_lizard_btn").css( "background-color", "#606060");
         break;
       case hands.spock:
-        $("#p2_spock_btn").css("text-decoration", "underline");
+        // $("#p2_spock_btn").css("text-decoration", "underline");
+        // $("#p2_spock_btn").css("text-transform", "uppercase");
+        $("#p2_spock_btn").css( "background-color", "#606060");
         break;
       default:
-      $("#p2_rock_btn").css("text-decoration", "none");
-      $("#p2_paper_btn").css("text-decoration", "none");
-      $("#p2_scissors_btn").css("text-decoration", "none");
-      $("#p2_lizard_btn").css("text-decoration", "none");
-      $("#p2_spock_btn").css("text-decoration", "none");
+      // $("#p2_rock_btn").css("text-decoration", "none");
+      // $("#p2_paper_btn").css("text-decoration", "none");
+      // $("#p2_scissors_btn").css("text-decoration", "none");
+      // $("#p2_lizard_btn").css("text-decoration", "none");
+      // $("#p2_spock_btn").css("text-decoration", "none");
+      // $("#p2_rock_btn").css("text-transform", "none");
+      // $("#p2_paper_btn").css("text-transform", "none");
+      // $("#p2_scissors_btn").css("text-transform", "none");
+      // $("#p2_lizard_btn").css("text-transform", "none");
+      // $("#p2_spock_btn").css("text-transform", "none");
     }
   }
 
@@ -375,12 +468,19 @@
     if (players.p2.name === names.computer) {
       $(".p2_hand_btn").prop( "disabled", false );
       players.p2.name = names.player2;
+      reset_text();
     } else {
       $(".p2_hand_btn").prop( "disabled", true );
       players.p2.name = names.computer;
+      reset_text();
+      $("#p2_rock_btn").css("background-color", "#606060");
+      $("#p2_paper_btn").css("background-color", "#606060");
+      $("#p2_scissors_btn").css("background-color", "#606060");
+      $("#p2_lizard_btn").css("background-color", "#606060");
+      $("#p2_spock_btn").css("background-color", "#606060");
     };
     $(this).html(players.p2.name);
-    reset_text_decorations();
+
   });
 
   ////////////////////////////////////////////////////////////////////////

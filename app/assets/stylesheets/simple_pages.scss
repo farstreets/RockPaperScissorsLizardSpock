@@ -2,9 +2,23 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-$darkblue: #15133C;
-$mintgreen: #5FC5BA;
-$lightblue: #0192C0;
+// $yellow: #15133C;
+// $darkblue: #5FC5BA;
+// $greyish: #0192C0;
+
+// $yellow: #0c467d;
+// $darkblue: #ffc04e;
+// $greyish: #e86f2a;
+
+// $yellow: #ff938e;
+// $darkblue: #c2e9f0;
+// $greyish: #f2ec66;
+
+$yellow: #FFBB00;
+$darkblue: #15133C; //3F681C
+$greyish: #606060;
+// #375E97
+// 606060 = greypurple
 
 * {box-sizing: border-box;}
 
@@ -14,8 +28,8 @@ html {
 }
 
 body {
-  background-color: $darkblue;
-  color: $mintgreen;
+  background-color: $yellow;
+  color: $darkblue;
   text-align: center;
   /* Helvetica/Arial-based sans serif stack */
   // font-family: Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -77,8 +91,8 @@ body {
     margin: 0;
     padding: 0;
     overflow:hidden; /* or overflow:auto; if you want scrollbars */
-    background-color: $darkblue;
-    color: $mintgreen;
+    background-color: $yellow;
+    color: $darkblue;
     font-size: 2em;
     text-transform: uppercase;
     // -webkit-transform: rotate(-90deg);
@@ -146,10 +160,10 @@ ul {
   overflow: hidden;
   border-top: solid;
   border-bottom: solid;
-  border-color: $darkblue;
+  border-color: $yellow;
   border-width: 0px;
-  // background-color: $mintgreen;
-  // color: $darkblue;
+  // background-color: $darkblue;
+  // color: $yellow;
   -webkit-margin-before: 0;
   -webkit-margin-after: 0;
   -webkit-margin-start: 0;
@@ -162,10 +176,10 @@ li {
   height: calc(100vh / 6);
   margin: 0;
   // border-style: solid;
-  // border-color: $darkblue;
+  // border-color: $yellow;
   // border-width: 4px;
-  background-color: $darkblue;
-  // color: $darkblue;
+  background-color: $yellow;
+  // color: $yellow;
 }
 
 // li a {
@@ -185,11 +199,11 @@ li {
 
 
 
-.player_li {
-  background-color: $darkblue;
-  color: $lightblue;
-  text-align: center;
-}
+// .player_li {
+//   background-color: $yellow;
+//   color: $greyish;
+//   text-align: center;
+// }
 .player_span {
   height: 100%;
   width: 100%;
@@ -229,106 +243,129 @@ li {
   font-weight: inherit;
 }
 .btn-primary {
-  background-color: $mintgreen;
-  color: $darkblue;
-  border-color: $darkblue;
+  background-color: $darkblue;
+  color: $yellow;
+  border-color: $yellow;
 }
 .btn-primary:active {
-  background-color: $mintgreen;
-  color: $darkblue;
+  background-color: $darkblue;
+  color: $yellow;
   outline: none;
-  border-color: $darkblue;
+  border-color: $yellow;
 }
 .btn-primary:focus {
-  background-color: $mintgreen;
-  color: $darkblue;
+  background-color: $darkblue;
+  color: $yellow;
   outline: none;
-  border-color: $darkblue;
+  border-color: $yellow;
 }
 .btn-primary:hover {
-  background-color: $darkblue;
-  color: $mintgreen;
-  border-color: $mintgreen;
+  background-color: $greyish; //$yellow;
+  color: $yellow;
+  border-color: $yellow;
 }
 .btn-primary:active:focus {
-  background-color: $darkblue;
-  color: $mintgreen;
-  border-color: $mintgreen;
+  background-color: $yellow;
+  color: $darkblue;
+  border-color: $darkblue;
   outline: none;
 }
 .btn-primary.disabled, .btn-primary[disabled], fieldset[disabled] .btn-primary {
-  opacity: 0.8 !important;
-  background-color: $mintgreen;
-  color: $darkblue;
-  border-color: $darkblue;
+  // opacity: 0.8 !important;
+  background-color: $greyish;
+  color: $yellow;
+  border-color: $yellow;
   outline: none;
 }
 .btn-primary.disabled:hover, .btn-primary[disabled]:hover, fieldset[disabled] .btn-primary:hover {
-  opacity: 0.8 !important;
-  background-color: $mintgreen;
-  color: $darkblue;
-  border-color: $darkblue;
+  // opacity: 0.8 !important;
+  background-color: $greyish;
+  color: $yellow;
+  border-color: $yellow;
   outline: none;
 }
 
 .btn-secondary {
-  text-transform: uppercase;
-  background-color: $darkblue;
-  color: $mintgreen;
-  border-color: $darkblue;
+  // text-transform: uppercase;
+  background-color: $yellow;
+  color: $darkblue;
+  border-color: $yellow;
 }
 .btn-secondary:active {
-  text-transform: uppercase;
-  background-color: $darkblue;
-  color: $mintgreen;
-  border-color: $darkblue;
+  // text-transform: uppercase;
+  background-color: $yellow;
+  color: $darkblue;
+  border-color: $yellow;
   outline: none;
 }
 .btn-secondary:focus {
-  text-transform: uppercase;
-  background-color: $darkblue;
-  color: $mintgreen;
-  border-color: $darkblue;
+  // text-transform: uppercase;
+  background-color: $yellow;
+  color: $darkblue;
+  border-color: $yellow;
   outline: none;
 }
 .btn-secondary:active:focus {
-  text-transform: uppercase;
-  background-color: $darkblue;
-  color: $mintgreen;
-  border-color: $mintgreen;
+  // text-transform: uppercase;
+  background-color: $yellow;
+  color: $darkblue;
+  border-color: $yellow;
   outline: none;
 }
 .btn-secondary:hover {
-  text-transform: uppercase;
-  background-color: $darkblue;
-  color: $mintgreen;
-  border-color: $mintgreen;
+  // text-transform: uppercase;
+  background-color: $yellow;
+  color: $darkblue;
+  border-color: $yellow;
 }
+.btn-secondary.disabled, .btn-secondary[disabled], fieldset[disabled] .btn-secondary {
+  background-color: $yellow;
+  color: $darkblue;
+  border-color: $yellow;
+}
+.btn-secondary.disabled:hover, .btn-secondary[disabled]:hover, fieldset[disabled] .btn-secondary:hover {
+  background-color: $yellow;
+  color: $darkblue;
+  border-color: $yellow;
+}
+
 #p1_dummy_btn {
-  text-transform: uppercase;
+  // text-transform: uppercase;
   cursor: default;
-  background-color: $darkblue;
-  color: $mintgreen;
+  background-color: $yellow;
+  color: $darkblue;
   opacity: 1;
+  border: solid;
+  border-width: 1px;
+  border-color: $yellow;
 }
 #p1_dummy_btn:hover {
-  text-transform: uppercase;
+  // text-transform: uppercase;
   cursor: default;
-  background-color: $darkblue;
-  color: $mintgreen;
+  background-color: $yellow;
+  color: $darkblue;
   opacity: 1;
+  border: solid;
+  border-width: 1px;
+  border-color: $yellow;
 }
 #div_below_img {
   cursor: default;
-  background-color: $darkblue;
-  color: $mintgreen;
+  background-color: $yellow;
+  color: $darkblue;
   opacity: 1;
+  border: solid;
+  border-width: 1px;
+  border-color: $yellow;
 }
 #div_below_img:hover {
   cursor: default;
-  background-color: $darkblue;
-  color: $mintgreen;
+  background-color: $yellow;
+  color: $darkblue;
   opacity: 1;
+  border: solid;
+  border-width: 1px;
+  border-color: $yellow;
 }
 .btn.disabled, .btn[disabled], fieldset[disabled] .btn {
   opacity: 1;

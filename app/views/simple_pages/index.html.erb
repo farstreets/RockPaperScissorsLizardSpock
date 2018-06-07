@@ -163,7 +163,7 @@
     reset_text_below_image();
     reset_text_decorations();
   }
-
+  reset_text();
   function randomHand() {
     rand_i = Math.floor((Math.random() * 5) + 1);
     hand_i = "";
@@ -203,7 +203,7 @@
           if (caller_i === players.p1.name) {
             $(".p1_hand_btn").prop( "disabled", true );
             // Get rid of last games output
-            reset_text_decorations();
+            reset_text();
             $("#p1_rock_btn").css("background-color", "#606060");
             $("#p1_paper_btn").css("background-color", "#606060");
             $("#p1_scissors_btn").css("background-color", "#606060");
@@ -212,7 +212,7 @@
           } else { // Player 2
             $(".p2_hand_btn").prop( "disabled", true );
             // Get rid of last games output
-            reset_text_decorations();
+            reset_text();
             $("#p2_rock_btn").css("background-color", "#606060");
             $("#p2_paper_btn").css("background-color", "#606060");
             $("#p2_scissors_btn").css("background-color", "#606060");
